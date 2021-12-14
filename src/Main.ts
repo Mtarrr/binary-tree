@@ -17,8 +17,7 @@ while (input = readlineSync.question("Options:" + "\n'1' to add node" + "\n'2' t
         }
         case "2": {
             let key = parseInt(readlineSync.question("key: "));
-            let isDeleted: boolean;
-            isDeleted = binaryTree.delete(key);
+            let isDeleted: boolean = binaryTree.delete(key);
             if (isDeleted == false) console.log("Error. Deletion failed");
             binaryTree.printTree();
             console.log(". . . . . . . . . .");
